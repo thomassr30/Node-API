@@ -2,8 +2,10 @@ import express from "express";
 import cors from "cors";
 import {config} from "dotenv";
 import morgan from "morgan";
-config()
+import {dbConnect} from './config/db.js'
 
+config()
+dbConnect()
 const app = express();
 const port = process.env.PORT
 
