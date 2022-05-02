@@ -12,8 +12,8 @@ const router = Router()
 router.get('/tracks', getItems)
 router.get('/tracks/:id', getItem)
 router.post('/tracks', createItem)
-router.put('/tracks', updateItem)
-router.delete('/tracks', deleteItem)
+router.put('/tracks/:id', updateItem)
+router.delete('/tracks/id:', deleteItem)
 
 
 export default router;
