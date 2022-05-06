@@ -17,3 +17,10 @@ export const validatorCreateItem = [
         return validateResults(req, res, next)
     }
 ]
+
+export const validatorGetItems = [
+    check('id').exists().notEmpty().isMongoId(),
+    (req, res, next) => {
+        return validateResults(req, res, next)
+    }
+]
